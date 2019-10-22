@@ -4,6 +4,8 @@ A super basic Cordova plugin for displaying and interacting with an HTML documen
 
 ([cordova-plugin-wkwebview-engine](https://github.com/apache/cordova-plugin-wkwebview-engine) must be installed separately)
 
+### [Example iOS App](https://github.com/josiaho/ExternalScreen-iOS)
+
 ## Installation
 
 ### With cordova-cli
