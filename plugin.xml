@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+    id="cordova-plugin-wkwebview-external-screen"
+    version="0.1.0">
+
+    <name>WKWebviewExternalScreen</name>
+    <description>
+        A super basic Cordova plugin for displaying content on an external screen via AirPlay or HDMI/VGA adapter utilizing the WKWebView in iOS 8+. (cordova-plugin-wkwebview-engine must be installed separately)
+    </description>
+	<author>Josiah Oslund</author>
+	<keywords>wk,wkwebview,external,multiscreen,screen,extended,presentation,api,plugin</keywords>
+    <license>MIT</license>
+
+    <engines>
+        <!--
+            Cordova 9.0.0 is all I have tested on - it should work fine with earlier versions.
+            Please modify the below line, test, and submit a PR if it works for you.
+        -->
+        <engine name="cordova-ios" version=">=3.0.0" />
+    </engines>
+
+    <js-module src="www/WKWebViewExternalScreen.js" name="ExternalScreen">
+       <clobbers target="ExternalScreen" />
+    </js-module>
+
+    <!-- ios -->
+    <platform name="ios">
+        <plugins-plist key="WKWebViewExternalScreen" string="WKWebViewExternalScreen" />
+
+        <config-file target="config.xml" parent="/*">
+            <feature name="ExternalScreen">
+                <param name="ios-package" value="ExternalScreen" />
+            </feature>
+        </config-file>
+
+        <header-file src="src/ios/WKWebViewExternalScreen.h" />
+        <source-file src="src/ios/WKWebViewExternalScreen.m" />
+    </platform>
+</plugin>

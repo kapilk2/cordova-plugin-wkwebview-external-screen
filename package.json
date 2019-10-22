@@ -1,0 +1,38 @@
+{
+  "name": "cordova-plugin-wkwebview-external-screen",
+  "version": "0.1.0",
+  "description": "A super basic Cordova plugin for displaying content on an external screen via AirPlay or HDMI/VGA adapter utilizing the WKWebView in iOS 8+. (cordova-plugin-wkwebview-engine must be installed separately)",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "cordova": {
+	  "id": "cordova-plugin-wkwebview-external-screen",
+	  "platforms": [
+	    "ios"
+	  ]
+	},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/josiaho/cordova-plugin-wkwebview-external-screen.git"
+  },
+  "keywords": [
+    "cordova",
+    "ecosystem:cordova",
+	"cordova-ios",
+    "wk",
+    "wkwebview",
+    "external",
+	"multiscreen",
+	"screen",
+	"extended",
+	"presentation",
+	"api",
+    "plugin"
+  ],
+  "author": "Josiah Oslund",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/josiaho/cordova-plugin-wkwebview-external-screen/issues"
+  },
+  "homepage": "https://github.com/josiaho/cordova-plugin-wkwebview-external-screen#readme"
+}
