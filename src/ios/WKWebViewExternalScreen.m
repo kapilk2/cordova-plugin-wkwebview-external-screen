@@ -45,8 +45,9 @@
         NSString* baseURLAddress = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"www"];
         NSString* a = @"file://";
         baseURLAddress = [a stringByAppendingString:baseURLAddress];
-       NSString* path = [NSString stringWithFormat:@"%@/%@", baseURLAddress, file];
-        NSURL *nsurl=[NSURL URLWithString:path];
+        NSString* path = [NSString stringWithFormat:@"%@/%@", baseURLAddress, file];
+        NSURL *nsurl = [NSURL URLWithString:[path stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+        // NSURL *nsurl=[NSURL URLWithString:path];
         NSURLRequest *request=[NSURLRequest requestWithURL:nsurl];
         [[self getWebView] loadRequest: request];
         CDVPluginResult *result = [CDVPluginResult resultWithStatus: CDVCommandStatus_OK];
